@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'google sans';
+    src: url('../fonts/Google_Sans/GoogleSans-Italic-VariableFont_GRAD\,opsz\,wght.ttf') format('ttf');
+    src: url('../fonts/Google_Sans/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf') format('ttf');
+    font-weight:normal;
+
+}
+:root {
+--button-color: 
+}
+
+.collapsible{
+cursor: pointer;
+padding: 10px;
+   border-radius:20px;
+    /*box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);*/
+    height: 50px;
+    width: 50%;
+    font-size: 1rem;
+    outline: none;
+    
+
+
+
+}
