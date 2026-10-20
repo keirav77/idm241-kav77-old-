@@ -4,12 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../build/assets/styles/style.css">
+    <link rel="normalize" href="../build/assets/styles/normalize.css">
+    <script src="../build/scripts/scripts.js"></script>
 </head>
 <body>
     <h1>Collapisble button</h1>
-    <button type="button" class="collapsible">My Drive</button>
+   <!-- <button type="button" class="collapsible">My Drive</button>
     <div class="title">
     <p> Open/Close</p>
+    </div> -->
+     <details class="dropdown">
+    <summary class="dropdown-toggle">My Drive</summary>
+    <div class="dropdown-menu">
+      <button type="button" class="dropdown-item">Folder 1</button>
+      <button type="button" class="dropdown-item">Folder 2</button>
     </div>
+  </details>
+  <!--Ai use: Line 14: I asked claude what's a better way to make a dropdown other than javascript and it mentioned
+  details because the browser handles the opening and closing -->
+  
+  <!--Ai Use: Lines: 16-18: I asked ai "How can I make a dropdown list that isn't going to connect me to another page? I don't want to use href=.... because I want it to open on a same page not not
+  link to a new one"
+  Answer: Instead of making it an an <a href=-- just use your typical buttons type, because
+  buttons don't jump to a different page.-->
+  <h2> Triggers</h2>
+<ul>
+    <li>Click or tap the "My drive" button to open the menu, clicking it a second time closes it</li>
+    <li>Keyboard: Pressing the enter or space bar when your cursor is hovered over the button will do the same thing</li>
+     <li>Hover: Moving the mouse over the "My drive" or "Folder options" starts the hover effect</li>   
+     <li>Press: clicking down on the button highlights the button blue and the button enters a pressed state.</li>
+</ul>
+
+  <h2> Rules</h2>
+<ul>
+    <li>The menu is closed by default opening it shows folder one and folder two, toggling the "My drive" button closes them.</li>
+     <li>One item is highlighted by hovering at a time by holding the cursor over the buttons. The menu stays open until the user clicks the button again</li>   
+</ul>
+  <h2>Feedback</h2>
+<h3>See</h3>
+    <ul>
+        <li>On hover the button darkens and a shadow pops up</li>
+        <li> The arrow rotates down 90 degrees to point down when the menu is open</li>
+        <li>The menu fades in using transitions when it opens</li>
+        <li> Each menu item has a round gray hover effect </li>
+    </ul>
+<h3>Hear</h3>
+<ul>
+    <li>Nothing the interaction doesn't have any sounds</li>
+</ul>
+<h3>Feel</h3>
+<ul>
+    <li>The cursor changes to a pointer finger when covered over clickable buttons, when the folder buttons are pressed it gives a click-type response but no vibration or </li>
+</ul>
+<h2>Loops & Modes</h2>
+<ul>
+    <li>Loops: The dropdown can be opened and closes a number of times. Each time resets
+        the arrow and the menu to the same starting state. 
+    </li>
+    <li>Modes: The button has a closed mode, and an open mode. Hover and keyboard focus are extra states on top of these modes. </li>
+</ul>
 </body>
 </html>
